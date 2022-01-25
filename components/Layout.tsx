@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <article className="mx-auto antialiased prose prose-invert lg:prose-xl">
+    <article className="prose prose-zinc mx-auto antialiased dark:prose-invert lg:prose-xl">
       <MDXProvider components={{}}>{children}</MDXProvider>
     </article>
   );

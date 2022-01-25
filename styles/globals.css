@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: theme('colors.slate.900');
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: theme('colors.zinc.900');
+  }
 }
 
 /* https://github.com/atomiks/rehype-pretty-code/blob/master/website/pages/index.mdx */
-pre > code {
+.prose pre > code {
   display: grid;
-}
-
-code {
   counter-reset: line;
 }
 
-code > .line::before {
+.prose pre > code > .line::before {
   counter-increment: line;
   content: counter(line);
 
